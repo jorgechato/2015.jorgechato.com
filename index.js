@@ -24,6 +24,9 @@ var config = require('./lib/config');
 var github = require('./lib/github');
 app.use(github);
 
+var instagram = require('./lib/instagram');
+app.use(instagram);
+
 app.use(function(req, res){
   res.sendFile(__dirname+'/dist/views/index.html');
 });
