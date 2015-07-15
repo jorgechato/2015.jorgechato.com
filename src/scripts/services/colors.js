@@ -187,12 +187,22 @@ angular.module("orggue")
     "nesC": "#94B0C7"
   };
   var headerColor;
+  var mainColors = [
+    '#ff2b2b',
+    '#2b7489',
+    '#5a6986',
+    '#6866fb',
+    '#0579aa',
+    '#89e051',
+    '#fcd46d',
+    '#29b544'
+  ];
 
   return {
     colors : colors,
     getRandomColor : function(){
-      var index = Math.floor(Math.random() * colors.length);
-      return colors[index][1];
+      var index = Math.floor(Math.random() * mainColors.length);
+      return mainColors[index];
     },
     getColor : function(key){
       return color[key];

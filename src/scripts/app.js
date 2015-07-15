@@ -1,12 +1,12 @@
 angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
-.costant('Config',{
+.constant('Config',{
   apiBase : '/api/'
 })
 .config(function($stateProvider,$urlRouterProvider,$locationProvider){
   $stateProvider
   .state('home',{
     url : "/",
-    controller : "homeCtrl",
+    //controller : "homeCtrl",
     templateUrl : "../views/element/home.html"
   });
   $urlRouterProvider.otherwise('/');
@@ -14,5 +14,5 @@ angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
   $locationProvider.html5Mode(true);
 })
 .run(function(Colors){
-  Colors.setHeaderColor(getRandomColor());
+  Colors.setHeaderColor(Colors.getRandomColor());
 });

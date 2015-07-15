@@ -1,4 +1,4 @@
-angular.module('hashtuber')
+angular.module('orggue')
 	.filter('linkUsername', function(randomcolor) {
 		return function(text) {
 			return '<a class="hashtag-link" href="http://twitter.com/' + text.slice(1) + '">' + text + '</a>';
