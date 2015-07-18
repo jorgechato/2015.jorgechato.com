@@ -7,7 +7,13 @@ angular.module('orggue')
     controller : function($scope,Colors,Sentence){
       var sentence = Sentence.getRandomSentence();
 
-      $scope.question= sentence[0];
+      $scope.changeQA = function(){
+        sentence = Sentence.getRandomSentence();
+        $scope.question = sentence[0];
+        $scope.answer = sentence[1];
+      };
+
+      $scope.question = sentence[0];
       $scope.answer = sentence[1];
 
       $scope.color = Colors.getHeaderColor();

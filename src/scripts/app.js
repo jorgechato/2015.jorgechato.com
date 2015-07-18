@@ -8,6 +8,14 @@ angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
   .state('work',{
     url : "/work",
     controller : "workCtrl",
+    templateUrl : Config.baseViews + "element/work.html"
+  })
+  .state('live',{
+    url : "/live",
+    templateUrl : Config.baseViews + "element/live.html"
+  })
+  .state('home',{
+    url : "/",
     templateUrl : Config.baseViews + "element/home.html"
   });
   $urlRouterProvider.otherwise('/work');

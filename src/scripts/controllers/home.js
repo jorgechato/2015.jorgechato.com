@@ -8,7 +8,6 @@ angular.module('orggue')
 
   $scope.$on('EndGithub',function(err,data){
     angular.forEach(data.repos,function(repo){
-      //console.log(repo);
       $scope.repos.push(repo);
     });
   });
