@@ -1,18 +1,21 @@
 angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
 .constant('Config',{
-  apiBase : '/api/'
+  apiBase : '/api/',
+  baseViews : '../views/'
 })
-.config(function($stateProvider,$urlRouterProvider,$locationProvider){
+.config(function(Config,$stateProvider,$urlRouterProvider,$locationProvider){
   $stateProvider
-  .state('home',{
-    url : "/",
-    //controller : "homeCtrl",
-    templateUrl : "../views/element/home.html"
+  .state('work',{
+    url : "/work",
+    controller : "workCtrl",
+    templateUrl : Config.baseViews + "element/home.html"
   });
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/work');
 
   $locationProvider.html5Mode(true);
 })
-.run(function(Colors){
+.run(function(Colors,middleware){
   Colors.setHeaderColor(Colors.getRandomColor());
+  middleware.setFilter('url','github/repos');
+  middleware.github();
 });

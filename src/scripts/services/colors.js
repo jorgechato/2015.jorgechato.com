@@ -188,14 +188,17 @@ angular.module("orggue")
   };
   var headerColor;
   var mainColors = [
-    '#ff2b2b',
-    '#2b7489',
-    '#5a6986',
-    '#6866fb',
-    '#0579aa',
-    '#89e051',
-    '#fcd46d',
-    '#29b544'
+    "#6caff1",
+    "#ff5967",
+    "#ff794d",
+    "#5082e5",
+    "#be5fb6",
+    "#33ccbe",
+    "#ffaf40",
+    "#68bf60",
+    "#cccc52",
+    "#7870cc",
+    "#548899"
   ];
 
   return {
@@ -205,7 +208,7 @@ angular.module("orggue")
       return mainColors[index];
     },
     getColor : function(key){
-      return color[key];
+      return colors[key];
     },
     setHeaderColor : function(randomColor){
       headerColor = randomColor;
