@@ -1,9 +1,9 @@
 angular.module('orggue')
-.controller('workCtrl',function($scope){
+.controller('workCtrl',function($scope,middleware){
   $scope.repos = [];
 
   $scope.$on('StartGithub',function(){
-    $scope.repos = [];
+    $scope.repos= [];
   });
 
   $scope.$on('EndGithub',function(err,data){

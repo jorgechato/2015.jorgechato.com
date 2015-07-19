@@ -7,11 +7,12 @@ angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
   $stateProvider
   .state('work',{
     url : "/work",
-    controller : "workCtrl",
+    controller : 'workCtrl',
     templateUrl : Config.baseViews + "element/work.html"
   })
   .state('live',{
     url : "/live",
+    controller : 'liveCtrl',
     templateUrl : Config.baseViews + "element/live.html"
   })
   .state('home',{

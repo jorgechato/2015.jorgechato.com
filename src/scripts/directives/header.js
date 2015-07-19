@@ -5,16 +5,13 @@ angular.module('orggue')
     replace : true,
     templateUrl : Config.baseViews + 'element/header.html',
     controller : function($scope,Colors,Sentence){
-      var sentence = Sentence.getRandomSentence();
-
       $scope.changeQA = function(){
-        sentence = Sentence.getRandomSentence();
+        var sentence = Sentence.getRandomSentence();
         $scope.question = sentence[0];
         $scope.answer = sentence[1];
       };
 
-      $scope.question = sentence[0];
-      $scope.answer = sentence[1];
+      $scope.changeQA();
 
       $scope.color = Colors.getHeaderColor();
 

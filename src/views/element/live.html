@@ -1,6 +1,11 @@
 <section id="live">
-  <div class="content">
-    <hr />
-    <h3>A look into my life</h3>
+<div class="content">
+  <hr />
+  <h3>A look into my life</h3>
+</div>
+<div class="media-live">
+  <div class="">
+    <instagram ng-class="{'size-item-1':$first}" picture="picture" ng-repeat="picture in instagram | orderBy:'-date'"></instagram >
   </div>
+</div>
 </section>

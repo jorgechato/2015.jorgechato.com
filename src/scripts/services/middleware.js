@@ -1,6 +1,7 @@
 angular.module('orggue')
 .service('middleware',function($http,api,$rootScope){
   var backupGithub = [];
+  var backupInstagram = [];
 
   var filters = {
     url : 'github/repos',
@@ -19,6 +20,17 @@ angular.module('orggue')
     });
   };
 
+  var instagram = function(filters,callback){
+    var params = {
+    };
+
+    return api.call(filters.url,params,{},function(data){
+      if (typeof callback == 'function') {
+        callback(data);
+      }
+    });
+  };
+
   return {
     github : function(){
       $rootScope.$broadcast('StartGithub');
@@ -27,6 +39,14 @@ angular.module('orggue')
       });
 
       backupGithub.push(repo);
+    },
+    instagram : function(){
+      $rootScope.$broadcast('StartInsta');
+      var picture = instagram(filters,function(data){
+        $rootScope.$broadcast('EndInsta', {insta: data});
+      });
+
+      backupInstagram.push(picture);
     },
     setFilter: function (key, value) {
       filters[key] = value;
