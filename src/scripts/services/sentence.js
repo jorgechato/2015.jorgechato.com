@@ -2,7 +2,7 @@ angular.module("orggue")
 .service("Sentence",function(){
   var question = [
     "Who is Jorge Chato?",
-    "What is your love?",
+    "What do you like to do?",
     "What would you like do next?",
     "What is your favourite quote?",
     "What is your goal?",
