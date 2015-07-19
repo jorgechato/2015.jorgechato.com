@@ -1,4 +1,13 @@
 #live
+  hr
+    margin-top 3em
+  span
+    font-size 2em
+    font-weight 300
+  .video
+    width 100%
+    height 360px
+    margin 0 auto
   .media-live
     max-width 1000px
     margin 0 auto
@@ -10,6 +19,11 @@
       display inline-block
       vertical-align top
       color white
+      transition all .5s fadeInUp
+      &:ng-enter
+        opacity 0
+      &:ng-leave
+        opacity 1
       img
         margin-top 0
         width 100%
