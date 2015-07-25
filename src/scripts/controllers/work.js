@@ -1,14 +1,21 @@
 angular.module('orggue')
 .controller('workCtrl',function($scope,middleware){
-  $scope.repos = [];
+  $scope.repos = middleware.getReposBackup();
 
   $scope.$on('StartGithub',function(){
-    $scope.repos= [];
+    $scope.repos = [];
   });
+
+  //var getRepos = function(){
+    //middleware.setFilter('url','github/repos');
+    //middleware.github();
+  //};
+
+  //getRepos();
 
   $scope.$on('EndGithub',function(err,data){
     angular.forEach(data.repos,function(repo){
-      $scope.repos.push(repo);
+      if(!data.cancel) $scope.repos.push(repo);
     });
   });
 });

@@ -12,6 +12,7 @@ angular.module('orggue')
     var params = {
       reponame : filters.reponame
     };
+    backupGithub = [];
 
     return api.call(filters.url,params,{},function(data){
       if (typeof callback == 'function') {
@@ -36,9 +37,12 @@ angular.module('orggue')
       $rootScope.$broadcast('StartGithub');
       var repo = github(filters,function(data){
         $rootScope.$broadcast('EndGithub', {repos: data});
-      });
 
-      backupGithub.push(repo);
+        backupGithub = data;
+      });
+    },
+    getReposBackup : function(){
+      return backupGithub;
     },
     instagram : function(){
       $rootScope.$broadcast('StartInsta');

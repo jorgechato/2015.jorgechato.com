@@ -4,7 +4,7 @@ angular.module('orggue')
     restrict : 'E',
     replace : true,
     templateUrl : Config.baseViews + 'element/header.html',
-    controller : function($scope,Colors,Sentence){
+    controller : function($scope,Colors,Sentence,middleware){
       $scope.changeQA = function(){
         var sentence = Sentence.getRandomSentence();
         $scope.question = sentence[0];
