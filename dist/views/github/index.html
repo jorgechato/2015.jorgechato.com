@@ -1,0 +1,10 @@
+<a href="{{repo.url}}" style="background : {{languageColor(repo.language)}};">
+  <div class="repo">
+    <div class="repo--hover">
+      <h4>{{repo.name}}</h4>
+      <div class="repo--description">{{repo.description}}</div>
+      <div class="repo--language">{{repo.language}}</div>
+      <div style="background-image : url({{repo.owner.img}});" class="repo--owner hint--top" data-hint="{{repo.owner.name}}"></div>
+    </div>
+  </div>
+</a>

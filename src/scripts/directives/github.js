@@ -3,19 +3,12 @@ angular.module('orggue')
   return{
     restrict : 'E',
     replace : true,
+    scope: {repo: '='},
     templateUrl : Config.baseViews + 'github/index.html',
-    controller : function($scope){
-      $scope.repos = [];
-
-      $scope.$on('StartGithub',function(){
-        $scope.repos = [];
-      });
-
-      $scope.$on('EndGithub',function(err,data){
-        angular.forEach(data.repos,function(repo){
-          $scope.repos.push(repo);
-        });
-      });
+    controller : function($scope,Colors){
+      $scope.languageColor = function(language){
+        return Colors.getColor(language);
+      };
     }
   };
 });

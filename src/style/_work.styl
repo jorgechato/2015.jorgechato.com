@@ -8,22 +8,79 @@
       margin 0 5%
       strong
         font-size 1.15em
-  .work
-    img
-      width 100px
-      height 100px
-      border-radius 50%
-    .data
-      .work--date
-        color $lightgrey
-      .work--links
-        a
-          font-size 17px
-          margin 0 .5em
+  .experience
+    margin auto
+    max-width 680px
+    padding 0 8px
+    @media screen and (min-width: 680px)
+      max-width 1200px
+    .work
+      @media screen and (min-width: 680px)
+        display inline-block
+        vertical-align top
+        width 40%
+        margin 0 2%
+      img
+        width 100px
+        height 100px
+        border-radius 50%
+      .data
+        .work--date
           color $lightgrey
+        .work--links
+          a
+            font-size 17px
+            margin 0 .5em
+            color $lightgrey
+            &:hover
+              color $mainColor
+        h4
+          font-size 25px
+          font-weight 400
+          margin 0
+  .projects
+    max-width 1200px
+    margin 0 auto
+    a
+      margin .5em
+      padding 0
+      width 250px
+      height 250px
+      display inline-block
+      vertical-align top
+      color white
+      transition all .5s fadeInUp
+      background $mainColor
+      &:ng-enter
+        opacity 0
+      &:ng-leave
+        opacity 1
+      .repo
+        width 100%
+        height 100%
+        .repo--hover
+          width 100%
+          height 100%
+          position absolute
+          top 0
+          left 0
+          transition opacity .3s ease
+          background rgba(black,.3)
+          opacity 0
           &:hover
-            color $mainColor
-      h4
-        font-size 25px
-        font-weight 400
-        margin 0
+            opacity 1
+          .repo--owner
+            background-size cover
+            background-repeat no-repeat
+            width 25px
+            height 25px
+            border-radius 50%
+            position absolute
+            bottom 8px
+            left 8px
+          .repo--language
+            position absolute
+            bottom 8px
+            right 8px
+          .repo--description
+            padding 0 8px
