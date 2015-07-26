@@ -1,6 +1,6 @@
 <a href="{{repo.url}}" style="background : {{languageColor(repo.language)}};">
   <div class="repo">
-    <div class="repo--hover">
+    <div class="repo--hover" ng-class="{'repo--mobile' : isMobile()}">
       <h4>{{repo.name}}</h4>
       <div class="repo--description">{{repo.description}}</div>
       <div class="repo--language">{{repo.language}}</div>
