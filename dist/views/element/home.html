@@ -1,4 +1,84 @@
 <section id="home">
-  <div class="content">
+<div class="content">
+  <section class="intro">
+    <p>
+    <span>A</span>s a lover of e-learning I founded a team, what we call BETACOACH, where every week different participants explain some relevant aspect of their knowledge and where discussions are always welcome.
+    </p>
+    <p>
+    <span>L</span>earn is my passion and if in the process I meet awesome people, the experience is bigger. Events and Hackathons are the best place to link really smart people each other, for that reason I try to keep an eye into this events.
+    <br />
+    Here are my top 6 events I had the opportunity to be.
+    </p>
+    <hr />
+    <h3>Events</h3>
+    <div class="event-data">
+      <img src="/assets/img/events/tnw.png" alt="TNW">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>TNW</h4>
+        <div class="event--description">Hackathon/Event<br />Amsterdam,ND<br />2015</div>
+      </div>
+    </div>
+    <div class="event-data">
+      <img src="/assets/img/events/uprise.png" alt="uprise startup festival 2015">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>Uprise</h4>
+        <div class="event--description">Event<br />Amsterdam,ND<br />2015</div>
+      </div>
+    </div>
+    <div class="event-data">
+      <img src="/assets/img/events/eumc.png" alt="EU mobile challenge">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>EU Mobile Challenge</h4>
+        <div class="event--description">Competition<br />Barcelona,Spain<br />2015</div>
+      </div>
+    </div>
+    <div class="event-data">
+      <img src="/assets/img/events/codemotion.png" alt="codemotion 2015">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>Codemotion</h4>
+        <div class="event--description">Congress<br />Madrid,Spain<br />2014</div>
+      </div>
+    </div>
+    <div class="event-data">
+      <img src="/assets/img/events/spaceapps.png" alt="space apps challenge 2014">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>NASA</h4>
+        <div class="event--description">Hackathon<br />Zaragoza,Spain<br />2014</div>
+      </div>
+    </div>
+    <div class="event-data">
+      <img src="/assets/img/events/congresoweb.png" alt="congreso web 2011 y 2014">
+      <div class="event--hover" ng-class="{'event--mobile' : isMobile()}">
+        <h4>Congreso Web</h4>
+        <div class="event--description">Congress<br />Zaragoza,Spain<br />2011 & 2014</div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <h3>High five</h3>
+  <div class="email" ng-init="activeTab = 'work'">
+    <ul>
+      <li ng-class="{'tab--active' : activeTab =='event'}" ng-click="activeTab = 'event'"><img src="/assets/img/event.jpg" alt="event"/>Event</li>
+      <li ng-class="{'tab--active' : activeTab =='work'}" ng-click="activeTab = 'work'"><img src="/assets/img/work.jpg" alt="work"/>Work</li>
+      <li ng-class="{'tab--active' : activeTab =='friend'}" ng-click="activeTab = 'friend'"><img src="/assets/img/friend.jpg" alt="frined"/>Friend</li>
+    </ul>
   </div>
+  <section id="post-email">
+    <p ng-show="activeTab == 'event'">
+    You have an amazing event and you need speakers or volunteers. Whether it is large or small, You contact me and I will try to help.
+    </p>
+    <p ng-show="activeTab == 'work'">
+    Do you want to work with me?, send me your email and we will keep in touch.
+    </p>
+    <p ng-show="activeTab == 'friend'">
+    Friends are always welcome. If you have an idea, you want to know me better or just drink a beer. Don't forget your name...
+    </p>
+    <form action="">
+      <input type="text" name="" id="post-name" value="" placeholder="name"/>
+      <input type="email" name="" id="post-email" value="" placeholder="example@domain.com"/>
+      <button class="clear" style="background:{{color}};border-color:{{color}};">Send</button>
+    </form>
+  </section>
+</div>
 </section>
+<style type='text/css'>.tab--active{border-top:2px solid {{color}}!important;color:{{color}}!important;}</style>

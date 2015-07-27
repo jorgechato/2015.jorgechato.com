@@ -17,6 +17,7 @@ angular.module("orggue", ['ui.router','ngRoute','ngAnimate'])
   })
   .state('home',{
     url : "/",
+    controller : 'homeCtrl',
     templateUrl : Config.baseViews + "element/home.html"
   });
   $urlRouterProvider.otherwise('/work');
