@@ -27,6 +27,9 @@ app.use(github);
 var instagram = require('./lib/instagram');
 app.use(instagram);
 
+var mandrill = require('./lib/mandrill');
+app.use(mandrill);
+
 app.use(function(req, res){
   res.sendFile(__dirname+'/dist/views/index.html');
 });

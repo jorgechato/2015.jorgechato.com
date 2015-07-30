@@ -56,6 +56,10 @@
   </section>
   <hr />
   <h3>High five</h3>
+  <p>
+  You can send me an email at <a href="mailto:jorgechato1@gmail.com">jorgechato1@gmail.com</a> or leave me your email.
+  </p>
+  <br />
   <div class="email" ng-init="activeTab = 'work'">
     <ul>
       <li ng-class="{'tab--active' : activeTab =='event'}" ng-click="activeTab = 'event'"><img src="/assets/img/event.jpg" alt="event"/>Event</li>
@@ -73,10 +77,12 @@
     <p ng-show="activeTab == 'friend'">
     Friends are always welcome. If you have an idea, you want to know me better or just drink a beer. Don't forget your name...
     </p>
-    <form action="">
-      <input type="text" name="" id="post-name" value="" placeholder="name"/>
-      <input type="email" name="" id="post-email" value="" placeholder="example@domain.com"/>
-      <button class="clear" style="background:{{color}};border-color:{{color}};">Send</button>
+    <form name="leaveEmail" ng-submit="leaveEmail.$valid && sendContact()" novalidate>
+      <input ng-keydown="emailSent = false" ng-model="contact.name" type="text" name="name" id="post-name" value="" placeholder="name"/>
+      <input ng-keydown="emailSent = false" ng-model="contact.email" type="email" name="email" id="post-email" value="" placeholder="example@domain.com"/>
+      <button type="submit" ng-click="emailSent = true" class="clear" style="background:{{color}};border-color:{{color}};">Send</button>
+      <div class="wrong-contact" ng-show="(leaveEmail.$invalid || contact.name === '' || contact.email === '') && emailSent">You did something wrong... Type your name and email and try again</div>
+      <div class="true-contact" ng-show="leaveEmail.$valid && contact.name !== '' && contact.email !== '' && emailSent">Your contact was sent to Jorge correctly, you will have a replay soon.</div>
     </form>
   </section>
 </div>

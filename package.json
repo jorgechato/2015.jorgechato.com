@@ -45,6 +45,7 @@
     "cors": "^2.7.1",
     "express": "^4.13.1",
     "instagram-node": "^0.5.7",
+    "node-mandrill": "^1.0.1",
     "octonode": "^0.7.1",
     "swig": "^1.4.2",
     "winston": "^1.0.1",

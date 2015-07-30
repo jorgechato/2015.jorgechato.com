@@ -5,7 +5,10 @@ angular.module('orggue')
 
   var filters = {
     url : 'github/repos',
-    reponame : ''
+    reponame : '',
+    name : '',
+    email : '',
+    category : 'work'
   };
 
   var github = function(filters,callback){
@@ -32,7 +35,24 @@ angular.module('orggue')
     });
   };
 
+  var email = function(filters,callback){
+    var params = {
+      email : filters.email,
+      name : filters.name,
+      category : filters.category
+    };
+
+    return api.call(filters.url,params,{},function(data){
+      if (typeof callback == 'function') {
+        callback(data);
+      }
+    },'POST');
+  };
+
   return {
+    email : function(){
+      var send = email(filters);
+    },
     github : function(){
       $rootScope.$broadcast('StartGithub');
       var repo = github(filters,function(data){
