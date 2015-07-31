@@ -1,5 +1,6 @@
 angular.module('orggue')
-.controller('liveCtrl',function($scope,middleware){
+.controller('liveCtrl',function($scope,middleware,$analytics,$location){
+  $analytics.pageTrack($location.path());
   $scope.instagram = [];
 
   var getImages = function(){

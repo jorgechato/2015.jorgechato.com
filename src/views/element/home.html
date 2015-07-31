@@ -81,8 +81,8 @@
       <input ng-keydown="emailSent = false" ng-model="contact.name" type="text" name="name" id="post-name" value="" placeholder="name"/>
       <input ng-keydown="emailSent = false" ng-model="contact.email" type="email" name="email" id="post-email" value="" placeholder="example@domain.com"/>
       <button type="submit" ng-click="emailSent = true" class="clear" style="background:{{color}};border-color:{{color}};">Send</button>
-      <div class="wrong-contact" ng-show="(leaveEmail.$invalid || contact.name === '' || contact.email === '') && emailSent">You did something wrong... Type your name and email and try again</div>
-      <div class="true-contact" ng-show="leaveEmail.$valid && contact.name !== '' && contact.email !== '' && emailSent">Your contact was sent to Jorge correctly, you will have a replay soon.</div>
+      <div class="wrong--contact" ng-show="(leaveEmail.$invalid || contact.name === '' || contact.email === '') && emailSent">You did something wrong... Type your name and email and try again</div>
+      <div class="true--contact" ng-show="leaveEmail.$valid && contact.name !== '' && contact.email !== '' && emailSent">Your contact was sent to Jorge correctly, you will have a replay soon.</div>
     </form>
   </section>
 </div>

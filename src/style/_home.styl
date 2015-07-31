@@ -80,6 +80,24 @@
         border  1px solid $inputgrey
         border-radius 0 5px 5px 0
         margin-left -2px
+      .wrong--contact
+        color $red
+        border 1px solid $red
+        background rgba($red,.3)
+      .true--contact
+        color $sky
+        border 1px solid $sky
+        background rgba($sky,.3)
+      .wrong--contact,.true--contact
+        border-radius 5px
+        padding .5em 0
+        max-width 600px
+        margin auto
+        margin-top 1em
+        &.ng-hide-add
+          animation: zoomOut .5s;
+        &.ng-hide-remove
+          animation: zoomIn .2s;
     img
       height 30px
       width 30px

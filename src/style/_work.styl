@@ -49,15 +49,15 @@
       display inline-block
       vertical-align top
       color white
-      transition all .5s fadeInUp
       background $mainColor
       background-repeat no-repeat
       background-size cover!important
+      animation zoomIn .5s
       @media screen and (min-width: 680px)
         margin 0
-      &:ng-enter
+      &.ng-enter
         opacity 0
-      &:ng-leave
+      &.ng-enter-active
         opacity 1
       .repo
         width 100%

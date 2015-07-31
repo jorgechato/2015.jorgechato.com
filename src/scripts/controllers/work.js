@@ -1,5 +1,6 @@
 angular.module('orggue')
-.controller('workCtrl',function($scope,middleware,Colors){
+.controller('workCtrl',function($scope,middleware,Colors,$analytics,$location){
+  $analytics.pageTrack($location.path());
   $scope.color = Colors.getHeaderColor();
   $scope.repos = middleware.getReposBackup();
 

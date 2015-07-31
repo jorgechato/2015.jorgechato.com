@@ -1,5 +1,6 @@
 angular.module('orggue')
-.controller('homeCtrl',function($scope,Colors,middleware){
+.controller('homeCtrl',function($scope,Colors,middleware,$analytics,$location){
+  $analytics.pageTrack($location.path());
   $scope.color = Colors.getHeaderColor();
 
   $scope.isMobile = function() {
