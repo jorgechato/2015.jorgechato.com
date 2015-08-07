@@ -22,7 +22,6 @@ angular.module('orggue')
     middleware.setFilter('name',$scope.contact.name);
     middleware.setFilter('email',$scope.contact.email);
     middleware.setFilter('category',$scope.contact.category);
-    //middleware.email();
-    console.log($scope.contact);
+    middleware.email();
   };
 });
