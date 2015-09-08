@@ -10,6 +10,11 @@ angular.module("orggue", ['ui.router','ngRoute','ngAnimate','angulartics','angul
     controller : 'workCtrl',
     templateUrl : Config.baseViews + "element/work.html"
   })
+  .state('movies',{
+    url : "/movies",
+    //controller : 'moviesCtrl',
+    //templateUrl : Config.baseViews + "element/movies.html"
+  })
   .state('live',{
     url : "/live",
     controller : 'liveCtrl',

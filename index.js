@@ -27,6 +27,9 @@ app.use(github);
 var instagram = require('./lib/instagram');
 app.use(instagram);
 
+var youtube = require('./lib/youtube');
+app.use(youtube);
+
 var mandrill = require('./lib/mandrill');
 app.use(mandrill);
 
