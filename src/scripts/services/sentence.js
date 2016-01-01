@@ -18,7 +18,7 @@ angular.module("orggue")
     "without goals you can't score",
     "DO MORE",
     "WORK HARD",
-    "Spain and currently working in Amsterdam",
+    "Spain, Amsterdam and currently looking for my new adventure",
     "the one who never give up",
     "learn something new"
   ];
